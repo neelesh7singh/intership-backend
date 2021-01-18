@@ -11,7 +11,6 @@ const sendToken = (user, statusCode, res) => {
   const token = signToken(user._id);
   const cookieOptions = {
     expires: new Date(Date.now() + 9 * 24 * 60 * 60 * 1000),
-    secure: true,
   };
   res.cookie('jwt', token, cookieOptions);
   user.password = undefined;
