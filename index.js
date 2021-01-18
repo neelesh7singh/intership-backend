@@ -32,7 +32,7 @@ mongoose
 
 // Middlewares
 app.set('trust proxy', true);
-app.use(cors({ credentials: true }));
+app.use(cors({ credentials: true, origin: 'https://neelesh7singh.github.io' }));
 app.use(express.json());
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
